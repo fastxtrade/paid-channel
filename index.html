@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="महाराष्ट्र मराठी ट्रेडिंग 🚩 - Marathi Trading Community. NIFTY, SENSEX, ZERO TO HERO आणि Chart Analysis. ₹799 Membership.">
+
+    <meta name="theme-color" content="#080808">
+
+    <title>महाराष्ट्र मराठी ट्रेडिंग 🚩 | ₹799 Membership</title>
+
+    <style>
+
+        /* ================================
+           RESET
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Devanagari", sans-serif;
+            background: #070707;
+            color: #ffffff;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            padding: 45px 0;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #382300 0%,
+                    #171005 28%,
+                    #070707 65%
+                );
+        }
+
+        .hero-content {
+            width: 100%;
+        }
+
+        .logo {
+            width: 125px;
+            height: 125px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 3px solid #ff9800;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 0 35px rgba(255, 152, 0, 0.35);
+        }
+
+        .brand {
+            font-size: clamp(32px, 8vw, 60px);
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            margin-bottom: 12px;
+        }
+
+        .flag {
+            color: #ff9800;
+        }
+
+        .members {
+            font-size: 18px;
+            color: #dddddd;
+            margin-bottom: 12px;
+        }
+
+        .members strong {
+            color: #ff9800;
+        }
+
+        .tagline {
+            color: #aaaaaa;
+            font-size: 14px;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 22px;
+        }
+
+        .hero-price {
+            color: #ff9800;
+
+            font-size: clamp(38px, 9vw, 55px);
+
+            font-weight: 800;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================================
+           BUTTON
+        ================================= */
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            max-width: 400px;
+
+            min-height: 55px;
+
+            padding: 15px 22px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-size: 17px;
+            font-weight: 800;
+
+            transition: 0.25s ease;
+        }
+
+        .btn-orange {
+            background: #ff9800;
+            color: #000000;
+
+            box-shadow:
+                0 8px 25px rgba(255, 152, 0, 0.20);
+        }
+
+        .btn-orange:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 12px 30px rgba(255, 152, 0, 0.30);
+        }
+
+
+        /* ================================
+           COMMON SECTION
+        ================================= */
+
+        section {
+            padding: 65px 0;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: clamp(27px, 7vw, 40px);
+
+            line-height: 1.25;
+
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+
+            color: #999999;
+
+            font-size: 15px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================================
+           MEMBERS PROOF
+        ================================= */
+
+        .proof-section {
+            background: #0b0b0b;
+        }
+
+        .proof-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 18px;
+
+            background: #111111;
+
+            border: 1px solid #292929;
+
+            border-radius: 15px;
+        }
+
+        .proof-title {
+            text-align: center;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+        }
+
+        .proof-title span {
+            color: #ff9800;
+        }
+
+        .proof-video {
+            width: 100%;
+
+            display: block;
+
+            background: #000000;
+
+            border-radius: 10px;
+
+            object-fit: contain;
+
+            max-height: 600px;
+        }
+
+        .video-note {
+            text-align: center;
+
+            color: #777777;
+
+            font-size: 12px;
+
+            margin-top: 10px;
+        }
+
+
+        /* ================================
+           WHAT YOU GET
+        ================================= */
+
+        .features {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 28px;
+        }
+
+        .feature {
+            background: #111111;
+
+            border: 1px solid #292929;
+
+            border-radius: 13px;
+
+            padding: 22px 12px;
+
+            text-align: center;
+
+            font-size: 16px;
+
+            font-weight: 700;
+        }
+
+        .feature-icon {
+            display: block;
+
+            font-size: 34px;
+
+            margin-bottom: 7px;
+        }
+
+        .feature:hover {
+            border-color: #ff9800;
+        }
+
+        .cta-center {
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+
+        /* ================================
+           REVIEWS
+        ================================= */
+
+        .reviews-section {
+            background: #0b0b0b;
+        }
+
+        .reviews {
+            display: flex;
+
+            gap: 14px;
+
+            overflow-x: auto;
+
+            padding: 5px 3px 20px;
+
+            scroll-snap-type: x mandatory;
+
+            -webkit-overflow-scrolling: touch;
+
+            scrollbar-width: thin;
+        }
+
+        .review-card {
+            flex: 0 0 82%;
+
+            max-width: 320px;
+
+            background: #111111;
+
+            border: 1px solid #292929;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            scroll-snap-align: center;
+        }
+
+        .review-card img {
+            width: 100%;
+
+            height: 420px;
+
+            display: block;
+
+            object-fit: contain;
+
+            background: #000000;
+        }
+
+        .carousel-note {
+            text-align: center;
+
+            color: #777777;
+
+            font-size: 12px;
+
+            margin-top: 3px;
+        }
+
+        .real-text {
+            text-align: center;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            margin-top: 5px;
+        }
+
+        .disclaimer {
+            text-align: center;
+
+            color: #777777;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+
+            margin-top: 14px;
+        }
+
+
+        /* ================================
+           FINAL CTA
+        ================================= */
+
+        .final-section {
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #2b1b00 0%,
+                    #0b0b0b 60%
+                );
+
+            border-top: 1px solid #252525;
+            border-bottom: 1px solid #252525;
+        }
+
+        .final-title {
+            font-size: clamp(29px, 7vw, 50px);
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+        }
+
+        .final-price {
+            color: #ff9800;
+
+            font-size: clamp(36px, 8vw, 48px);
+
+            font-weight: 800;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px 15px;
+
+            background: #050505;
+
+            color: #777777;
+
+            font-size: 12px;
+        }
+
+        .footer-brand {
+            color: #eeeeee;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* ================================
+           TABLET / DESKTOP
+        ================================= */
+
+        @media (min-width: 700px) {
+
+            .features {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 18px;
+            }
+
+            .review-card {
+                flex: 0 0 280px;
+            }
+
+            .review-card img {
+                height: 400px;
+            }
+
+            .btn {
+                width: auto;
+                min-width: 280px;
+            }
+
+        }
+
+
+        /* ================================
+           SMALL MOBILE
+        ================================= */
+
+        @media (max-width: 400px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .hero {
+                padding: 35px 0;
+            }
+
+            .logo {
+                width: 105px;
+                height: 105px;
+            }
+
+            .brand {
+                font-size: 30px;
+            }
+
+            .members {
+                font-size: 16px;
+            }
+
+            .tagline {
+                font-size: 12px;
+            }
+
+            .hero-price {
+                font-size: 37px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .proof-box {
+                padding: 12px;
+            }
+
+            .review-card {
+                flex-basis: 86%;
+            }
+
+            .review-card img {
+                height: 390px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     1. HERO / FIRST SCREEN
+=================================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+
+            <!-- LOGO -->
+
+            <img
+                src="logo.jpg.jpeg"
+                alt="महाराष्ट्र मराठी ट्रेडिंग"
+                class="logo"
+            >
+
+
+            <!-- CHANNEL NAME -->
+
+            <h1 class="brand">
+
+                महाराष्ट्र मराठी ट्रेडिंग
+                <span class="flag">🚩</span>
+
+            </h1>
+
+
+            <!-- MEMBERS -->
+
+            <div class="members">
+
+                <strong>1300+ Members</strong>
+                | Marathi Trading Community
+
+            </div>
+
+
+            <!-- TAGLINE -->
+
+            <div class="tagline">
+
+                NIFTY • SENSEX • ZERO TO HERO • CHART ANALYSIS
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <div class="hero-price">
+
+                ₹799 Membership
+
+            </div>
+
+
+            <!-- MAIN CTA -->
+
+            <a
+                href="https://superprofile.bio/vig/6aa93537e31f7e0014647014"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-orange"
+            >
+
+                🟠 JOIN MEMBERSHIP ₹799
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     2. MEMBERS PROOF
+=================================================== -->
+
+<section class="proof-section">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            1300+ MEMBERS PROOF 🚀
+
+        </h2>
+
+
+        <div class="proof-box">
+
+
+            <div class="proof-title">
+
+                <span>1300+</span>
+                Traders Already Joined 🚀
+
+            </div>
+
+
+            <!-- VIDEO -->
+
+            <video
+                class="proof-video"
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="telegram-proof.mp4"
+                    type="video/mp4"
+                >
+
+                तुमचा browser video support करत नाही.
+
+            </video>
+
+
+            <div class="video-note">
+
+                Our Marathi Trading Community
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     3. WHAT YOU GET
+=================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            ₹799 मध्ये काय मिळेल?
+
+        </h2>
+
+
+        <div class="features">
+
+
+            <!-- 1 -->
+
+            <div class="feature">
+
+                <span class="feature-icon">
+                    📈
+                </span>
+
+                NIFTY & SENSEX
+
+            </div>
+
+
+            <!-- 2 -->
+
+            <div class="feature">
+
+                <span class="feature-icon">
+                    🎯
+                </span>
+
+                ZERO TO HERO Trading
+
+            </div>
+
+
+            <!-- 3 -->
+
+            <div class="feature">
+
+                <span class="feature-icon">
+                    📊
+                </span>
+
+                Chart Analysis
+
+            </div>
+
+
+            <!-- 4 -->
+
+            <div class="feature">
+
+                <span class="feature-icon">
+                    👥
+                </span>
+
+                Trading Community & Guidance
+
+            </div>
+
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="cta-center">
+
+            <a
+                href="https://superprofile.bio/vig/6aa93537e31f7e0014647014"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-orange"
+            >
+
+                🟠 JOIN MEMBERSHIP ₹799
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     4. REVIEWS + RESULTS
+=================================================== -->
+
+<section class="reviews-section">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            Our Members ❤️
+
+        </h2>
+
+
+        <div class="section-subtitle">
+
+            Real Members • Real Experiences
+
+        </div>
+
+
+        <!-- REVIEW CAROUSEL -->
+
+        <div class="reviews">
+
+
+            <!-- IMAGE 1 -->
+
+            <div class="review-card">
+
+                <img
+                    src="img1.jpeg"
+                    alt="Member Review 1"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <!-- IMAGE 2 -->
+
+            <div class="review-card">
+
+                <img
+                    src="img2.jpeg"
+                    alt="Member Review 2"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <!-- IMAGE 3 -->
+
+            <div class="review-card">
+
+                <img
+                    src="img3.jpeg"
+                    alt="Member Review 3"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <!-- IMAGE 4 -->
+
+            <div class="review-card">
+
+                <img
+                    src="img4.jpeg"
+                    alt="Member Review 4"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <!-- IMAGE 5 -->
+
+            <div class="review-card">
+
+                <img
+                    src="img5.jpeg"
+                    alt="Member Review 5"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <div class="carousel-note">
+
+            ← Swipe to see more reviews →
+
+        </div>
+
+
+        <div class="real-text">
+
+            Real Members • Real Experiences
+
+        </div>
+
+
+        <div class="disclaimer">
+
+            Trading involves market risk.
+            No profit is guaranteed.
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     5. FINAL CONVERSION
+=================================================== -->
+
+<section class="final-section">
+
+    <div class="container">
+
+
+        <h2 class="final-title">
+
+            Trading Community मध्ये
+            <br>
+
+            आजच Join व्हा! 🚀
+
+        </h2>
+
+
+        <div class="final-price">
+
+            ₹799 Membership
+
+        </div>
+
+
+        <!-- FINAL CTA -->
+
+        <a
+            href="https://superprofile.bio/vig/6aa93537e31f7e0014647014"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-orange"
+        >
+
+            🟠 JOIN MEMBERSHIP ₹799
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+=================================================== -->
+
+<footer>
+
+
+    <div class="footer-brand">
+
+        महाराष्ट्र मराठी ट्रेडिंग 🚩
+
+    </div>
+
+
+    <div>
+
+        NIFTY • SENSEX • ZERO TO HERO • CHART ANALYSIS
+
+    </div>
+
+
+    <div class="disclaimer">
+
+        Trading involves market risk.
+        No profit is guaranteed.
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>
